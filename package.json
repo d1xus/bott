@@ -1,0 +1,30 @@
+{
+  "name": "minecraft-telegram-bridge",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Forward Minecraft Bedrock chat events to a private Telegram chat",
+  "scripts": {
+    "start": "node index.js",
+    "check": "node --check index.js && node --check worker.js && node --check lib/config.js && node --check lib/message.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": "^20.17.0 || >=22.9.0"
+  },
+  "keywords": [
+    "minecraft",
+    "bedrock",
+    "telegram",
+    "chat-bridge"
+  ],
+  "author": "d1xus",
+  "license": "MIT",
+  "dependencies": {
+    "bedrock-protocol": "^3.58.2",
+    "dotenv": "^17.4.2",
+    "raknet-native": "file:vendor/raknet-native-stub"
+  },
+  "overrides": {
+    "uuid": "11.1.1"
+  }
+}
